@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="log-sig.css" />
   </head>
   <body>
-    <h3 class="logo">Logo</h3>
+    <h3 class="logo">ConneX</h3>
     <div class="nav">
       <ul class="items">
         <a href="login-dark.html"><li class="item_dark">Dark Mode</li></a>
@@ -15,6 +15,33 @@
         <li id="active" class="item">Login</li>
       </ul>
       <h3 class="border"></h3>
+    </div>
+    <div class="Log_box">
+      <div class="box">
+        <h1>Login</h1>
+        <form action="submit_login" method="GET">
+          <div class="inputBox">
+            <input type="text" name="e-mail" autocomplete="off" required />
+            <label>
+              E-mail
+            </label>
+          </div>
+
+          <div class="inputBox">
+            <input
+              type="password"
+              name="password"
+              autocomplete="off"
+              required
+            />
+            <label>
+              Password
+            </label>
+          </div>
+          <div></div>
+          <input type="submit" name="" value="Login" />
+        </form>
+      </div>
     </div>
   </body>
 </html>

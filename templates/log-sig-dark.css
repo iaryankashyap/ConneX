@@ -1,23 +1,23 @@
 * {
   font-family: Century Gothic;
 }
+
 .logo {
   position: absolute;
-  font-size: 60px;
-  color: white;
+  font-size: 375%;
+  color: rgb(255, 255, 255);
   margin-top: 0px;
   top: 0;
   transition: ease 0.3s;
 }
-.logo:hover {
-  color: crimson;
-}
+
 body {
-  background-color: rgb(0, 0, 0);
+  background: rgb(0, 0, 0);
+  height: 96vh;
 }
 
 #active {
-  color: rgba(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 .item {
   font-size: 20px;
@@ -30,13 +30,13 @@ body {
   transition: ease 0.3s;
 }
 .item:hover {
-  color: rgba(255, 255, 255);
+  color: rgb(255, 255, 255), 173);
   list-style-type: none;
   float: right;
 }
 .item_dark {
   font-size: 20px;
-  color: rgb(252, 252, 252);
+  color: rgb(255, 255, 255);
   border: 1px solid rgb(255, 255, 255);
 
   list-style-type: none;
@@ -47,13 +47,13 @@ body {
   padding-left: 8px;
   padding-right: 8px;
   padding-bottom: 3px;
-  border-radius: 6px;
+  border-radius: 0px;
   background-color: rgba(40, 163, 211, 0);
   transition: ease 0.3s;
 }
 .item_dark:hover {
   color: rgb(0, 0, 0);
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   list-style-type: none;
   float: right;
 }
@@ -63,6 +63,78 @@ body {
 }
 
 .border {
-  border-bottom: 1px solid rgb(231, 203, 203);
+  border-bottom: 1px solid rgb(255, 255, 255);
   padding-top: 5%;
+}
+
+.box {
+  width: 375px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.box h1 {
+  margin-bottom: 30px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.box .inputBox {
+  position: relative;
+}
+
+.box .inputBox input {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  background: transparent;
+  outline: none;
+}
+
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  transition: 0.5s;
+}
+
+.box input[type="submit"] {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  background: rgb(0, 0, 0);
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.box input[type="submit"]:hover {
+  background-color: white;
+  color: rgb(0, 0, 0);
+}
+
+.box input:focus ~ label,
+.box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #ffffff;
+  font-size: 12px;
 }
