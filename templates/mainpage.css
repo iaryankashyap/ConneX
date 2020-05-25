@@ -1,0 +1,35 @@
+* {
+  font-family: Century Gothic;
+  background-color: crimson;
+}
+
+.head {
+  color: white;
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid white;
+}
+
+.subhead {
+  color: white;
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 70px;
+}
+
+.list {
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+  border-width: 2px;
+  margin: 40%;
+  margin-top: 0%;
+  margin-bottom: 5%;
+  transition: ease 0.3s;
+  padding: 5px;
+}
+
+.list:hover {
+  color: crimson;
+  background-color: white;
+}
