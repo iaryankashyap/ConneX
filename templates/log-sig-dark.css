@@ -1,0 +1,68 @@
+* {
+  font-family: Century Gothic;
+}
+.logo {
+  position: absolute;
+  font-size: 60px;
+  color: white;
+  margin-top: 0px;
+  top: 0;
+  transition: ease 0.3s;
+}
+.logo:hover {
+  color: crimson;
+}
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+#active {
+  color: rgba(255, 255, 255);
+}
+.item {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  list-style-type: none;
+  float: right;
+  padding: 30px;
+  padding-top: 20px;
+  padding-bottom: 3px;
+  transition: ease 0.3s;
+}
+.item:hover {
+  color: rgba(255, 255, 255);
+  list-style-type: none;
+  float: right;
+}
+.item_dark {
+  font-size: 20px;
+  color: rgb(252, 252, 252);
+  border: 1px solid rgb(255, 255, 255);
+
+  list-style-type: none;
+  float: right;
+  padding: 30px;
+  margin-top: 16px;
+  padding-top: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 3px;
+  border-radius: 6px;
+  background-color: rgba(40, 163, 211, 0);
+  transition: ease 0.3s;
+}
+.item_dark:hover {
+  color: rgb(0, 0, 0);
+  background-color: white;
+  list-style-type: none;
+  float: right;
+}
+.items {
+  margin-right: 50px;
+  padding-right: 0%;
+}
+
+.border {
+  border-bottom: 1px solid rgb(231, 203, 203);
+  padding-top: 5%;
+}
