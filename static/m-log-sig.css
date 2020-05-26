@@ -3,84 +3,51 @@
 }
 
 .logo {
-  position: absolute;
-  font-size: 150%;
-  color: rgb(255, 255, 255);
-  margin-top: 0px;
-  margin-right: 0px;
-  top: 0;
-  transition: ease 0.3s;
+  font-size: 70px;
+  padding-top: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: crimson;
+  text-align: center;
+  border-bottom: 1px solid crimson;
 }
-
-body {
-  background: crimson;
-  height: 96vh;
-}
-
-#active {
-  color: rgb(255, 255, 255);
-}
-.item {
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.5);
-  list-style-type: none;
-  float: right;
-  padding-left: 5px;
-  padding-bottom: 3px;
-  transition: ease 0.3s;
-}
-.item:hover {
-  color: rgb(255, 255, 255);
-  list-style-type: none;
-  float: right;
-}
-.item_dark {
-  font-size: 15px;
-  color: rgb(255, 255, 255);
-  border: 1px solid rgb(255, 255, 255);
-
-  list-style-type: none;
-  float: right;
-
-  padding-top: 3px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-bottom: 3px;
-  border-radius: 0px;
-  background-color: rgba(40, 163, 211, 0);
-  transition: ease 0.3s;
-}
-.item_dark:hover {
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  list-style-type: none;
-  float: right;
-}
-.items {
-  margin-right: 50px;
-  padding-right: 0%;
+a {
+  text-decoration: none;
+  color: white;
 }
 
 .border {
-  border-bottom: 1px solid rgb(255, 255, 255);
-  padding-top: 5%;
+  border-bottom: 1px solid crimson;
+  padding-top: 50px;
+}
+
+.item,
+.item_dark {
+  padding: 5px;
+  list-style-type: none;
+  border: 1px solid crimson;
+  background-color: crimson;
+  border-radius: 4px;
+  float: right;
+  margin-right: 10%;
+  margin-top: 0px;
 }
 
 .box {
-  width: 375px;
+  width: 200px;
 
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 50px;
-  background: rgba(255, 255, 255, 0.3);
+  padding: 40px;
+  background: rgba(55, 0, 255, 0.377);
   border-radius: 10px;
 }
 
 .box h1 {
   margin-bottom: 30px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-align: center;
   text-transform: capitalize;
 }
@@ -93,11 +60,11 @@ body {
   width: 100%;
   padding: 10px;
   font-size: 15px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   letter-spacing: 1px;
   margin-bottom: 30px;
   border: none;
-  border-bottom: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(0, 0, 0);
   background: transparent;
   outline: none;
 }
@@ -109,7 +76,7 @@ body {
   letter-spacing: 1px;
   padding: 10px 0;
   font-size: 16px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   transition: 0.5s;
 }
 
@@ -117,7 +84,7 @@ body {
   background: transparent;
   border: none;
   outline: none;
-  color: white;
+  color: rgb(255, 255, 255);
   background: crimson;
   padding: 8px 16px;
   border-radius: 5px;
@@ -134,6 +101,6 @@ body {
 .box input:valid ~ label {
   top: -20px;
   left: 0;
-  color: #ffffff;
+  color: #000000;
   font-size: 12px;
 }
