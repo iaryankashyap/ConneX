@@ -1,20 +1,18 @@
 # ConneX
 
-ConneX is a Login-SignUp web proto type.
+ConneX is a Login-SignUp web proto type. Includes 1,247 lines of code.
+ConneX can be launched using "application.py".
+The whole web-application is based on flask.
 
 <h3>Screenshots:</h3>
 
 ![Login](/screenshots/login.png)
 ![Signup](/screenshots/signup.png)
 
-
-
 <h3>Dark Mode:</h3>
 
 ![Login-Dark](/screenshots/login-dark.png)
 ![Signup-Dark](/screenshots/signup-dark.png)
-
-
 
 <h3>License:</h3>
 
