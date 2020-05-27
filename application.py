@@ -4,12 +4,8 @@ from flask import Flask, flash, request, redirect, render_template
 app = Flask(__name__)
 
 
+
 @app.route("/")
-def default():
-    return render_template("mainpage.html")
-
-
-@app.route("/login")
 def login():
     return render_template("login.html")
 
