@@ -2,6 +2,12 @@
 <html>
   <head>
     <title>ConneX</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" type="text/css" href="../static/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
@@ -11,14 +17,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
+    <div class="alert alert-warning" role="alert">
+      {{error}}
+    </div>
     <h2 class="connex">ConneX</h2>
     <img class="wave" src="../static/wave.png" />
     <div class="container">
       <div class="img"></div>
       <div class="login-content">
-        <form action="/login_details" method="POST">
+        <form action="/signup_details" method="POST">
           <img src="../static/avatar.png" />
-          <h2 class="title">Login</h2>
+          <h2 class="title">Sign Up</h2>
+          <div class="input-div one">
+            <div class="i">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="div">
+              <h5>E-mail</h5>
+              <input name="email" type="text" class="input" />
+            </div>
+          </div>
           <div class="input-div one">
             <div class="i">
               <i class="fas fa-user"></i>
@@ -37,10 +55,9 @@
               <input name="password" type="password" class="input" />
             </div>
           </div>
-          <a href="#">Forgot Password?</a>
-          <input type="submit" class="btn" value="Login" />
-          <h5 class="new_head">
-            Don't have an account? <a class="sig" href="/signup">Sign Up</a>
+          <input type="submit" class="btn" value="Sign Up" />
+          <h5 style="font-size: 15px;" class="new_head">
+            Already have an account? <a class="sig" href="/">Login</a>
           </h5>
         </form>
       </div>

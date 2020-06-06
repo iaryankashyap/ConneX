@@ -2,6 +2,12 @@
 <html>
   <head>
     <title>ConneX</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" type="text/css" href="../static/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
@@ -11,6 +17,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
+    <div class="alert alert-success" role="alert">
+      {{error}}
+    </div>
     <h2 class="connex">ConneX</h2>
     <img class="wave" src="../static/wave.png" />
     <div class="container">
@@ -39,7 +48,7 @@
           </div>
           <a href="#">Forgot Password?</a>
           <input type="submit" class="btn" value="Login" />
-          <h5 class="new_head">
+          <h5 style="font-size: 15px;" class="new_head">
             Don't have an account? <a class="sig" href="/signup">Sign Up</a>
           </h5>
         </form>
