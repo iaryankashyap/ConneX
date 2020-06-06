@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+.new_head {
+  color: #999;
+}
+
+.sig {
+  display: block;
+  text-align: center;
+  color: rgb(0, 110, 255);
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
 body {
   font-family: "Poppins", sans-serif;
   overflow: hidden;
