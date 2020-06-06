@@ -1,4 +1,4 @@
-from cs50 import SQL
+import cs50
 from flask import Flask, flash, request, redirect, render_template
 
 app = Flask(__name__)
