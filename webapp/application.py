@@ -124,6 +124,7 @@ def passotp():
             return render_template("wrongsignup.html", error="Sorry, you entered wrong OTP.")
 
 
+# commit
 '''
 if __name__ == "__main__":
     app.run(debug=True)
