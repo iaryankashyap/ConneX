@@ -11,6 +11,7 @@ signuppage = "signup.html"
 db = sqlite3.connect("users.db")
 db.execute(
     "CREATE TABLE users('username' varchar(255), 'password' varchar(255), 'email' varchar(255))")
+db.commit()
 db.close()
 
 
