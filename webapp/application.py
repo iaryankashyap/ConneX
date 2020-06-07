@@ -8,6 +8,11 @@ app = Flask(__name__)
 loginpage = "login.html"
 signuppage = "signup.html"
 
+db = sqlite3.connect("users.db")
+db.execute(
+    "CREATE TABLE users('username' varchar(255), 'password' varchar(255), 'email' varchar(255))")
+db.close()
+
 
 def send_otp(emailid, admin_email, password):
     x = random.randint(1000, 5000)
