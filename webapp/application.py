@@ -1,4 +1,5 @@
-import sqlite3
+import mysql.connector as sq
+
 import smtplib
 import random
 from flask import Flask, flash, request, redirect, render_template
@@ -7,12 +8,15 @@ app = Flask(__name__)
 
 loginpage = "login.html"
 signuppage = "signup.html"
-
-db = sqlite3.connect("users.db")
-db.execute(
-    "CREATE TABLE users('username' varchar(255), 'password' varchar(255), 'email' varchar(255))")
-db.commit()
-db.close()
+'''
+sqcon = sq.connect(host='localhost', database='connex$users',
+                   user='connex', password='rootrootroot')
+cursor = sqcon.cursor()
+cursor.execute(
+    "CREATE TABLE users(username varchar(255), password varchar(255), email varchar(255))")
+cursor.commit()
+cursor.close()
+'''
 
 
 def send_otp(emailid, admin_email, password):
@@ -27,45 +31,53 @@ def send_otp(emailid, admin_email, password):
 
 
 def checkuser(username):
-    db = sqlite3.connect("users.db")
-    var = db.execute("SELECT * FROM users")
+    sqcon = sq.connect(host='localhost', database='connex$users',
+                       user='connex', password='rootrootroot')
+    cursor = sqcon.cursor()
+    var = cursor.execute("SELECT * FROM users")
     for i in var:
         if i[0] == username:
-            db.close()
+            cursor.close()
             return False
-    db.close()
+    cursor.close()
     return True
 
 
 def checkemail(email):
-    db = sqlite3.connect("users.db")
-    var = db.execute("SELECT * FROM users")
+    sqcon = sq.connect(host='localhost', database='connex$users',
+                       user='connex', password='rootrootroot')
+    cursor = sqcon.cursor()
+    var = cursor.execute("SELECT * FROM users")
     for i in var:
         if i[2] == email:
-            db.close()
+            cursor.close()
             return False
-    db.close()
+    cursor.close()
     return True
 
 
 def register(username, password, email):
-    db = sqlite3.connect("users.db")
+    sqcon = sq.connect(host='localhost', database='connex$users',
+                       user='connex', password='rootrootroot')
+    cursor = sqcon.cursor()
     query = "INSERT INTO users(username,password,email) VALUES ('" + \
         username+"','"+password+"','"+email+"')"
-    db.execute(query)
-    db.commit()
-    db.close()
+    cursor.execute(query)
+    cursor.commit()
+    cursor.close()
 
 
 def log_check(username, password):
-    db = sqlite3.connect("users.db")
-    var = db.execute("SELECT * FROM users")
+    sqcon = sq.connect(host='localhost', database='users',
+                       user='connex', password='rootrootroot')
+    cursor = sqcon.cursor()
+    var = cursor.execute("SELECT * FROM users")
     for i in var:
         if i[0] == username:
             if i[1] == password:
-                db.close()
+                cursor.close()
                 return True
-    db.close()
+    cursor.close()
     return False
 
 
