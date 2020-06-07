@@ -113,34 +113,18 @@ def otppg():
                     global username
                     global password
                     global email
-                    global x
+
                     username = request.form.get("username")
                     password = request.form.get("password")
                     email = request.form.get("email")
-
-                    x = send_otp(email, "school.connex@gmail.com",
-                                 "portalconnex")
-                    x = str(x)
-
-                    return render_template("otp.html")
+                    register(username, password, email)
+                    return render_template("newlogin.html", error="Sign up success, Please login with your credentials.")
                 else:
                     return render_template("wrongsignup.html", error="Email already registered!")
             else:
                 return render_template("wrongsignup.html", error="Username not available!")
         else:
             return render_template("wrongsignup.html", error="Password must be at least 8 characters.")
-
-
-@app.route("/otp_details", methods=["GET", "POST"])
-def passotp():
-    if request.method == "POST":
-        otp = request.form.get("otp")
-        otp = str(otp)
-        if otp == x:
-            register(username, password, email)
-            return render_template("newlogin.html", error="Sign up success, please login with your credentials.")
-        else:
-            return render_template("wrongsignup.html", error="Sorry, you entered wrong OTP.")
 
 
 # commit
