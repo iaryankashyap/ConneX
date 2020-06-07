@@ -1,4 +1,6 @@
-from cs50 import SQL
+import sqlite3
+import smtplib
+import random
 from flask import Flask, flash, request, redirect, render_template
 
 app = Flask(__name__)
@@ -7,35 +9,58 @@ loginpage = "login.html"
 signuppage = "signup.html"
 
 
+def send_otp(emailid, admin_email, password):
+    x = random.randint(1000, 5000)
+    content = "Hello there, your OTP is " + str(x) + "\n\nRegards, ConneX."
+    server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+    server.ehlo()
+    server.login(admin_email, password)
+    server.sendmail(admin_email, emailid, content)
+    server.close()
+    return x
+
+
 def checkuser(username):
-    db = SQL("sqlite:///users.db")
+    db = sqlite3.connect("../users.db")
     var = db.execute("SELECT * FROM users")
-    for i in range(len(var)):
-        if var[i]["username"] == username:
+    for i in var:
+        if i[0] == username:
+            db.close()
             return False
+    db.close()
     return True
 
 
-def register(username, password):
-    db = SQL("sqlite:///users.db")
-    db.execute("INSERT INTO users(username,password) VALUES (:username,:password)",
-               username=username, password=password)
+def checkemail(email):
+    db = sqlite3.connect("../users.db")
+    var = db.execute("SELECT * FROM users")
+    for i in var:
+        if i[2] == email:
+            db.close()
+            return False
+    db.close()
+    return True
+
+
+def register(username, password, email):
+    db = sqlite3.connect("../users.db")
+    query = "INSERT INTO users(username,password,email) VALUES ('" + \
+        username+"','"+password+"','"+email+"')"
+    db.execute(query)
+    db.commit()
+    db.close()
 
 
 def log_check(username, password):
-    db = SQL("sqlite:///users.db")
+    db = sqlite3.connect("../users.db")
     var = db.execute("SELECT * FROM users")
-    for i in range(len(var)):
-        if var[i]["username"] == username:
-            if var[i]["password"] == password:
+    for i in var:
+        if i[0] == username:
+            if i[1] == password:
+                db.close()
                 return True
+    db.close()
     return False
-
-
-def submit_record(admission, name, classs, marks):
-    db = SQL("sqlite:///users.db")
-    db.execute("INSERT INTO records(admission,name,classs,marks) VALUES (:admission,:name,:classs,:marks)",
-               admission=admission, name=name, classs=classs, marks=marks)
 
 
 @app.route("/")
@@ -59,22 +84,44 @@ def login_details():
             return render_template("loginfail.html")
 
 
-@app.route("/signup_details", methods=["GET", "POST"])
-def sign_check():
+@app.route("/otp", methods=["GET", "POST"])
+def otppg():
     if request.method == "POST":
 
         if len(request.form.get("password")) > 7:
             if checkuser(request.form.get("username")):
+                if checkemail(request.form.get("email")):
+                    global username
+                    global password
+                    global email
+                    global x
+                    username = request.form.get("username")
+                    password = request.form.get("password")
+                    email = request.form.get("email")
 
-                mess = "Signed up successfully, please login with your credentials."
-                username = request.form.get("username")
-                password = request.form.get("password")
-                register(username, password)
-                return render_template("newlogin.html", error=mess)
+                    x = send_otp(email, "school.connex@gmail.com",
+                                 "portalconnex")
+                    x = str(x)
+
+                    return render_template("otp.html")
+                else:
+                    return render_template("wrongsignup.html", error="Email already registered!")
             else:
                 return render_template("wrongsignup.html", error="Username not available!")
         else:
             return render_template("wrongsignup.html", error="Password must be at least 8 characters.")
+
+
+@app.route("/otp_details", methods=["GET", "POST"])
+def passotp():
+    if request.method == "POST":
+        otp = request.form.get("otp")
+        otp = str(otp)
+        if otp == x:
+            register(username, password, email)
+            return render_template("newlogin.html", error="Sign up success, please login with your credentials.")
+        else:
+            return render_template("wrongsignup.html", error="Sorry, you entered wrong OTP.")
 
 
 '''

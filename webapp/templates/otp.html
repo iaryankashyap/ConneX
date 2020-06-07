@@ -17,48 +17,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div class="alert alert-warning" role="alert">
-      {{error}}
+    <div class="alert alert-success" role="alert">
+      An OTP has been sent on your email.
     </div>
     <h2 style="font-weight: 700;" class="connex">ConneX</h2>
     <img class="wave" src="../static/wave.png" />
     <div class="container">
       <div class="img"></div>
       <div class="login-content">
-        <form action="/otp" method="POST">
+        <form action="/otp_details" method="POST">
           <img src="../static/avatar.png" />
-          <h2 class="title">Sign Up</h2>
+          <h2 class="title">Confirm OTP</h2>
           <div class="input-div one">
-            <div class="i">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="div">
-              <h5>E-mail</h5>
-              <input name="email" type="text" class="input" />
-            </div>
-          </div>
-          <div class="input-div one">
-            <div class="i">
-              <i class="fas fa-user"></i>
-            </div>
-            <div class="div">
-              <h5>Username</h5>
-              <input name="username" type="text" class="input" />
-            </div>
-          </div>
-          <div class="input-div pass">
             <div class="i">
               <i class="fas fa-lock"></i>
             </div>
             <div class="div">
-              <h5>Password</h5>
-              <input name="password" type="password" class="input" />
+              <h5>OTP</h5>
+              <input name="otp" type="text" class="input" />
             </div>
           </div>
-          <input type="submit" class="btn" value="Sign Up" />
-          <h5 style="font-size: 15px;" class="new_head">
-            Already have an account? <a class="sig" href="/">Login</a>
-          </h5>
+
+          <input type="submit" class="btn" value="Login" />
         </form>
       </div>
     </div>
