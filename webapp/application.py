@@ -8,27 +8,6 @@ app = Flask(__name__)
 
 loginpage = "login.html"
 signuppage = "signup.html"
-'''
-sqcon = sq.connect(host='connex.mysql.pythonanywhere-serconnex.mysql.pythonanywhere-services.com', database='connex$users',
-                   user='connex', password='rootrootroot')
-cursor = sqcon.cursor()
-cursor.execute(
-    "CREATE TABLE users(username varchar(255), password varchar(255), email varchar(255))")
-cursor.commit()
-cursor.close()
-'''
-
-
-def send_otp(emailid, admin_email, password):
-    x = random.randint(1000, 5000)
-    content = "Hello there, your OTP is " + str(x) + "\n\nRegards, ConneX."
-    server = smtplib.SMTP('smtp.gmail.com', 587)
-    server.ehlo()
-    server.starttls()
-    server.login(admin_email, password)
-    server.sendmail(admin_email, emailid, content)
-    server.close()
-    return x
 
 
 def checkuser(username):
@@ -38,9 +17,9 @@ def checkuser(username):
     cursor.execute("SELECT * FROM users")
     for i in cursor:
         if i[0] == username:
-            cursor.close()
+            sqcon.close()
             return False
-    cursor.close()
+    sqcon.close()
     return True
 
 
@@ -51,9 +30,9 @@ def checkemail(email):
     cursor.execute("SELECT * FROM users")
     for i in cursor:
         if i[2] == email:
-            cursor.close()
+            sqcon.close()
             return False
-    cursor.close()
+    sqcon.close()
     return True
 
 
@@ -64,8 +43,8 @@ def register(username, password, email):
     query = "INSERT INTO users(username,password,email) VALUES ('" + \
         username+"','"+password+"','"+email+"')"
     cursor.execute(query)
-    cursor.commit()
-    cursor.close()
+    sqcon.commit()
+    sqcon.close()
 
 
 def log_check(username, password):
@@ -76,9 +55,9 @@ def log_check(username, password):
     for i in cursor:
         if i[0] == username:
             if i[1] == password:
-                cursor.close()
+                sqcon.close()
                 return True
-    cursor.close()
+    sqcon.close()
     return False
 
 
