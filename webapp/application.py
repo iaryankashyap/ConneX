@@ -9,7 +9,7 @@ app = Flask(__name__)
 loginpage = "login.html"
 signuppage = "signup.html"
 '''
-sqcon = sq.connect(host='localhost', database='connex$users',
+sqcon = sq.connect(host='connex.mysql.pythonanywhere-serconnex.mysql.pythonanywhere-services.com', database='connex$users',
                    user='connex', password='rootrootroot')
 cursor = sqcon.cursor()
 cursor.execute(
@@ -31,7 +31,7 @@ def send_otp(emailid, admin_email, password):
 
 
 def checkuser(username):
-    sqcon = sq.connect(host='localhost', database='connex$users',
+    sqcon = sq.connect(host='connex.mysql.pythonanywhere-services.com', database='connex$users',
                        user='connex', password='rootrootroot')
     cursor = sqcon.cursor()
     var = cursor.execute("SELECT * FROM users")
@@ -44,7 +44,7 @@ def checkuser(username):
 
 
 def checkemail(email):
-    sqcon = sq.connect(host='localhost', database='connex$users',
+    sqcon = sq.connect(host='connex.mysql.pythonanywhere-services.com', database='connex$users',
                        user='connex', password='rootrootroot')
     cursor = sqcon.cursor()
     var = cursor.execute("SELECT * FROM users")
@@ -57,7 +57,7 @@ def checkemail(email):
 
 
 def register(username, password, email):
-    sqcon = sq.connect(host='localhost', database='connex$users',
+    sqcon = sq.connect(host='connex.mysql.pythonanywhere-services.com', database='connex$users',
                        user='connex', password='rootrootroot')
     cursor = sqcon.cursor()
     query = "INSERT INTO users(username,password,email) VALUES ('" + \
@@ -68,7 +68,7 @@ def register(username, password, email):
 
 
 def log_check(username, password):
-    sqcon = sq.connect(host='localhost', database='users',
+    sqcon = sq.connect(host='connex.mysql.pythonanywhere-services.com', database='users',
                        user='connex', password='rootrootroot')
     cursor = sqcon.cursor()
     var = cursor.execute("SELECT * FROM users")
