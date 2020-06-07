@@ -34,8 +34,8 @@ def checkuser(username):
     sqcon = sq.connect(host='connex.mysql.pythonanywhere-services.com', database='connex$users',
                        user='connex', password='rootrootroot')
     cursor = sqcon.cursor()
-    var = cursor.execute("SELECT * FROM users")
-    for i in var:
+    cursor.execute("SELECT * FROM users")
+    for i in cursor:
         if i[0] == username:
             cursor.close()
             return False
@@ -47,8 +47,8 @@ def checkemail(email):
     sqcon = sq.connect(host='connex.mysql.pythonanywhere-services.com', database='connex$users',
                        user='connex', password='rootrootroot')
     cursor = sqcon.cursor()
-    var = cursor.execute("SELECT * FROM users")
-    for i in var:
+    cursor.execute("SELECT * FROM users")
+    for i in cursor:
         if i[2] == email:
             cursor.close()
             return False
@@ -71,8 +71,8 @@ def log_check(username, password):
     sqcon = sq.connect(host='connex.mysql.pythonanywhere-services.com', database='users',
                        user='connex', password='rootrootroot')
     cursor = sqcon.cursor()
-    var = cursor.execute("SELECT * FROM users")
-    for i in var:
+    cursor.execute("SELECT * FROM users")
+    for i in cursor:
         if i[0] == username:
             if i[1] == password:
                 cursor.close()
