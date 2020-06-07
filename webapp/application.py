@@ -22,8 +22,9 @@ cursor.close()
 def send_otp(emailid, admin_email, password):
     x = random.randint(1000, 5000)
     content = "Hello there, your OTP is " + str(x) + "\n\nRegards, ConneX."
-    server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+    server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
+    server.starttls()
     server.login(admin_email, password)
     server.sendmail(admin_email, emailid, content)
     server.close()
