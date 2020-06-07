@@ -48,7 +48,7 @@ def register(username, password, email):
 
 
 def log_check(username, password):
-    sqcon = sq.connect(host='connex.mysql.pythonanywhere-services.com', database='users',
+    sqcon = sq.connect(host='connex.mysql.pythonanywhere-services.com', database='connex$users',
                        user='connex', password='rootrootroot')
     cursor = sqcon.cursor()
     cursor.execute("SELECT * FROM users")
