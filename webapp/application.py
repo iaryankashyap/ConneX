@@ -21,7 +21,7 @@ def send_otp(emailid, admin_email, password):
 
 
 def checkuser(username):
-    db = sqlite3.connect("../users.db")
+    db = sqlite3.connect("users.db")
     var = db.execute("SELECT * FROM users")
     for i in var:
         if i[0] == username:
@@ -32,7 +32,7 @@ def checkuser(username):
 
 
 def checkemail(email):
-    db = sqlite3.connect("../users.db")
+    db = sqlite3.connect("users.db")
     var = db.execute("SELECT * FROM users")
     for i in var:
         if i[2] == email:
@@ -43,7 +43,7 @@ def checkemail(email):
 
 
 def register(username, password, email):
-    db = sqlite3.connect("../users.db")
+    db = sqlite3.connect("users.db")
     query = "INSERT INTO users(username,password,email) VALUES ('" + \
         username+"','"+password+"','"+email+"')"
     db.execute(query)
@@ -52,7 +52,7 @@ def register(username, password, email):
 
 
 def log_check(username, password):
-    db = sqlite3.connect("../users.db")
+    db = sqlite3.connect("users.db")
     var = db.execute("SELECT * FROM users")
     for i in var:
         if i[0] == username:
