@@ -80,7 +80,7 @@ def login_details():
         password = request.form.get("password")
         if log_check(username, password):
             logged = True
-            return render_template("homepage.html")
+            return render_template("homepage2.html")
         else:
             return render_template("loginfail.html")
 
