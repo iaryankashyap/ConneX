@@ -4,6 +4,8 @@ import smtplib
 import random
 from flask import Flask, flash, request, redirect, render_template
 
+logged
+
 app = Flask(__name__)
 
 loginpage = "login.html"
