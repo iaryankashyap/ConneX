@@ -25,56 +25,71 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-    <title>ConneX</title>
+    <title>ConneX-Home</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="#">ConneX</a>
+    <nav
+      class="navbar sticky-top rounded-bottom navbar-expand-lg navbar-dark bg-primary"
+    >
+      <a style="font-family: Century Gothic;" class="navbar-brand" href="#"
+        >ConneX</a
+      >
       <button
         class="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
+            <a class="nav-link">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a href="/" class="nav-link" href="#">Logout</a>
+            <a href="#about" class="nav-link">About </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Web Apps
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#redirect">ReadX</a>
+            </div>
           </li>
         </ul>
+
+        <a href="/"
+          ><button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+            Logout
+          </button></a
+        >
       </div>
     </nav>
-    <h2
-      style="
-        text-align: center;
-        color: #2c76c5bd;
-        padding-top: 10px;
-        font-family: Century Gothic;
-        margin-bottom: 60px;
-        margin-top: 20px;
-      "
-    >
-      Welcome
-    </h2>
+
     <div style="margin: 30px;" class="row">
       <div class="col-sm-6">
-        <div class="card">
+        <div style="margin-bottom: 30px;" class="card">
           <div class="card-body">
             <h5 class="card-title">
-              Source Code
+              Source Codes
             </h5>
             <p class="card-text">
-              Get the source code of this webapp on GitHub.
+              Get the source code on GitHub.
             </p>
             <a
               href="https://www.github.com/iaryankashyap"
@@ -100,10 +115,89 @@
         </div>
       </div>
     </div>
-    <div style="color: black; text-align: center;margin-top: 20%;" id="last" class="wrap">
+    <div
+      style="
+        text-align: center;
+        margin-right: 40px;
+        margin-left: 40px;
+        margin-bottom: 30px;
+      "
+      class="alert alert-warning"
+      role="alert"
+    >
+      Check out Web-apps developed by me.
+    </div>
+    <div style="margin-left: 30px; margin-right: 30px;" class="jumbotron">
+      <h1 id="redirect" class="display-4">ReadX</h1>
+      <p class="lead">ReadX checks your paragraph and give it a grade.</p>
+
+      <hr class="my-4" />
+
+      <a
+        class="btn btn-primary btn-lg"
+        href="https://www.bit.ly/readxweb"
+        role="button"
+        >Launch</a
+      >
+    </div>
+    <div
+      id="about"
+      style="
+        text-align: center;
+        margin-right: 40px;
+        margin-left: 40px;
+        margin-bottom: 30px;
+      "
+      class="alert alert-warning"
+      role="alert"
+    >
+      My Certifications
+    </div>
+    <div style="text-align: center;" class="alig">
+      <div style="margin: 30px;" class="row">
+        <div style="margin-right: 30px;" class="to">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">
+              Completed cs50. May 20,2020<br /><br />Thank you to David and
+              brian for making it possible.
+              <a href="https://t.co/F5fEhUY1IB">pic.twitter.com/F5fEhUY1IB</a>
+            </p>
+            &mdash; Aryan Kashyap (@imaryankashyap)
+            <a
+              href="https://twitter.com/imaryankashyap/status/1265510168449728519?ref_src=twsrc%5Etfw"
+              >May 27, 2020</a
+            >
+          </blockquote>
+        </div>
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">
+            Completed &quot;The Fundamentals of Digital Marketing&quot; from
+            Google Digital Unlocked. May 23, 2020
+            <a href="https://t.co/pXn6sRifDS">pic.twitter.com/pXn6sRifDS</a>
+          </p>
+          &mdash; Aryan Kashyap (@imaryankashyap)
+          <a
+            href="https://twitter.com/imaryankashyap/status/1265510692603527168?ref_src=twsrc%5Etfw"
+            >May 27, 2020</a
+          >
+        </blockquote>
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        ></script>
+      </div>
+    </div>
+    <div style="margin: 20px;" class="border"></div>
+    <div
+      style="color: black; text-align: center; margin-bottom: 20px;"
+      id="last"
+      class="wrap"
+    >
       <h6 class="text-dark small font-weight-bold">
-        <i style="color: #007bff;" class="fas fa-code"></i> with <i style="color: #007bff;" class="fas fa-heart"></i> by Aryan
-        Kashyap
+        <i style="color: #007bff;" class="fas fa-code"></i> with
+        <i style="color: #007bff;" class="fas fa-heart"></i> by Aryan Kashyap
       </h6>
+    </div>
   </body>
 </html>
