@@ -1,8 +1,25 @@
 # ConneX
 
-ConneX is a Login-SignUp web proto type.
+ConneX is a Login-SignUp webapp proto type.
 
-This project is a part of #100DaysOfCode by FreeCodeCamp.org
+I made this project during my #100DaysOfCode challenge.
+
+![dev](/screenshots/made.png)
+
+<h3>Website:</h3>
+<a href="bit.ly/connexweb">Click here</a>
+
+<h3>Screenshots:</h3>
+
+> The website is responsive.
+
+<h2>Login Page:</h2>
+
+![login](/screenshots/login.png)
+
+<h2>SignUp Page:</h2>
+
+![signup](/screenshots/signup.png)
 
 <h3>License:</h3>
 
