@@ -4,7 +4,7 @@ import smtplib
 import random
 from flask import Flask, flash, request, redirect, render_template
 
-logged
+logged = False
 
 app = Flask(__name__)
 
@@ -79,6 +79,7 @@ def login_details():
         username = request.form.get("username")
         password = request.form.get("password")
         if log_check(username, password):
+            logged = True
             return render_template("homepage.html")
         else:
             return render_template("loginfail.html")
@@ -109,7 +110,6 @@ def otppg():
 
 
 # commit
-'''
+
 if __name__ == "__main__":
     app.run(debug=True)
-'''
