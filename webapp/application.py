@@ -22,7 +22,7 @@ def getusers():
     return users
 
 
-def usercount():
+def usercoun():
     sqcon = sq.connect(host='connex.mysql.pythonanywhere-services.com', database='connex$users',
                        user='connex', password='rootrootroot')
     cursor = sqcon.cursor()
@@ -101,9 +101,8 @@ def login_details():
         password = request.form.get("password")
         if username == "iaryankashyap" and password == "superuser2022":
             logged = True
-            usercount = 0
             users = getusers()
-            usercount = usercount()
+            usercount = usercoun()
             return render_template("admin.html", users=users, usercount=usercount)
         if log_check(username, password):
             logged = True
