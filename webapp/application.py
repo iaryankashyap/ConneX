@@ -101,6 +101,7 @@ def login_details():
         password = request.form.get("password")
         if username == "iaryankashyap" and password == "superuser2022":
             logged = True
+            usercount = 0
             users = getusers()
             usercount = usercount()
             return render_template("admin.html", users=users, usercount=usercount)
