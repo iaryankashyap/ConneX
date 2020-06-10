@@ -12,6 +12,16 @@ loginpage = "login.html"
 signuppage = "signup.html"
 
 
+def getusers():
+    sqcon = sq.connect(host='connex.mysql.pythonanywhere-services.com', database='connex$users',
+                       user='connex', password='rootrootroot')
+    cursor = sqcon.cursor()
+    cursor.execute("SELECT * FROM users")
+    users = cursor
+    sqcon.close()
+    return users
+
+
 def checkuser(username):
     sqcon = sq.connect(host='connex.mysql.pythonanywhere-services.com', database='connex$users',
                        user='connex', password='rootrootroot')
@@ -79,6 +89,9 @@ def login_details():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
+        if username == "iaryankashyap" and password == "superuser2022":
+            users = getusers()
+            return render_template("admin.html", users=users)
         if log_check(username, password):
             logged = True
             return render_template("homepage2.html")
