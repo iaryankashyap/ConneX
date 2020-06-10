@@ -112,6 +112,7 @@ def otppg():
 
 @app.route("/logout")
 def logout():
+    global logged
     logged = False
     return redirect("/")
 
