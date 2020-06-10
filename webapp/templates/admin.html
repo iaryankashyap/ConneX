@@ -62,7 +62,9 @@
                 Total Users:
               </h5>
               <p class="card-text">
-                {{usercount}}
+                <div class="alert alert-warning" role="alert">
+                    {{usercount}}
+                  </div>
               </p>
               
             </div>
@@ -71,9 +73,11 @@
         <div class="col-sm-6">
           <div class="card bg-warning">
             <div class="card-body">
-              <h5 class="card-title">Logins:</h5>
+              <h5 class="card-title">Status:</h5>
               <p class="card-text">
-                {{logincount}}
+                <div class="alert alert-success" role="alert">
+                    Activated
+                  </div>
               </p>
               
             </div>

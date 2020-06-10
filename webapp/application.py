@@ -29,7 +29,9 @@ def usercoun():
                        user='connex', password='rootrootroot')
     cursor = sqcon.cursor()
     cursor.execute("SELECT COUNT(*) FROM users")
-    usercount = cursor
+    for i in cursor:
+        p = i[0]
+    usercount = p
     sqcon.close()
     return usercount
 
