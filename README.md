@@ -1,6 +1,6 @@
 # ConneX
 
-ConneX is a Login-SignUp webapp proto type.
+ConneX is my personal web-app collection website.
 
 I made this project during my #100DaysOfCode challenge.
 
