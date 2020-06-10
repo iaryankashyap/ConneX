@@ -75,6 +75,7 @@ def signup():
 
 @app.route("/login_details", methods=["GET", "POST"])
 def login_details():
+    global logged
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
