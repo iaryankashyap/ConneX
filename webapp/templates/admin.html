@@ -85,9 +85,9 @@
         <h1 class="display-4">User List:</h1>
                <hr class="my-4">
                <ul class="list-group">
-                {%for i in users%}
-                    <li class="list-group-item bg-success text-light">{{i[0]}}</li>
-                {%endfor%} 
+                {% for i in users %}
+                    <li class="list-group-item bg-success text-light">{{i}}</li>
+                {% endfor %} 
               </ul>
       </div>
 
