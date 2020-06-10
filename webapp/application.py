@@ -20,7 +20,6 @@ def getusers():
     cursor.execute("SELECT * FROM users")
     for i in cursor:
         users.append(i[0])
-    users = cursor
     sqcon.close()
     return users
 
