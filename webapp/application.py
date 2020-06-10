@@ -3,7 +3,7 @@ import mysql.connector as sq
 import smtplib
 import random
 from flask import Flask, flash, request, redirect, render_template
-
+global logged
 logged = False
 
 app = Flask(__name__)
@@ -108,6 +108,12 @@ def otppg():
         else:
             return render_template("wrongsignup.html", error="Password must be at least 8 characters.")
 
+
+@app.route("/logout")
+def logout():
+    logged = False
+    return redirect("/")
+
 # READX
 
 
@@ -165,7 +171,10 @@ def grade(text):
 
 @app.route("/readx")
 def home():
-    return render_template(home_main)
+    if logged == True:
+        return render_template(home_main)
+    else:
+        return render_template("newlogin.html", error="Please login to continue.")
 
 
 @app.route("/home-dark")
@@ -222,7 +231,9 @@ def condetdark():
         f.close()
     return render_template(findr)
 
-#ENKRYPT
+# ENKRYPT
+
+
 def isstring(string):
     '''Checks if entry is a valid string'''
     for i in range(len(string)):
@@ -275,7 +286,10 @@ def decrypt(text, key="ZXCVMNBLKJFGHDSAQWEYTRUIOP"):
 
 @app.route("/enkrypt")
 def homeencry():
-    return render_template("en-home.html")
+    if logged == True:
+        return render_template("en-home.html")
+    else:
+        return render_template("newlogin.html", error="Please login to continue")
 
 
 @app.route("/enkrypt_details", methods=["GET", "POST"])
