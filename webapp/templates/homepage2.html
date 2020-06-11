@@ -36,7 +36,7 @@
     <nav
       class="navbar sticky-top rounded-bottom navbar-expand-lg navbar-dark bg-primary"
     >
-      <a style="font-family: Century Gothic;" class="navbar-brand" href="#"
+      <a class="navbar-brand" href="#"
         >ConneX</a
       >
       <button
@@ -54,13 +54,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a href="#about" class="nav-link">About </a>
+          <li class="nav-item active">
+            <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About </a>
           </li>
 
-          <li class="nav-item dropdown">
+          <li class="nav-item active dropdown">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -70,7 +70,7 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Web Apps
+            <i class="fas fa-globe"></i> Web Apps
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#redirect">ReadX</a>
@@ -84,7 +84,7 @@
 
         <a href="/logout"
           ><button class="btn btn-outline-light my-2 my-sm-0" type="submit">
-            Logout
+            Logout <i class="fas fa-sign-out-alt"></i>
           </button></a
         >
       </div>
@@ -92,7 +92,7 @@
 
     <div style="margin: 30px;" class="row">
       <div class="col-sm-6">
-        <div style="margin-bottom: 30px;" class="card">
+        <div style="margin-bottom: 30px;" class="card bg-dark text-light">
           <div class="card-body">
             <h5 class="card-title">
               Source Codes
@@ -109,7 +109,7 @@
         </div>
       </div>
       <div class="col-sm-6">
-        <div class="card">
+        <div class="card bg-dark text-light">
           <div class="card-body">
             <h5 class="card-title">Follow</h5>
             <p class="card-text">
@@ -124,17 +124,10 @@
         </div>
       </div>
     </div>
-    <div
-      style="
-        text-align: center;
-        margin-right: 40px;
-        margin-left: 40px;
-        margin-bottom: 30px;
-      "
-      class="alert alert-warning"
-      role="alert"
-    >
-      Check out Web-apps developed by me.
+    <div style="margin-bottom:30px;margin-left: 30px;margin-right: 30px;background-color:rgba(0, 66, 248, 0.247);" class="card">
+      <div style="text-align: center;" class="card-body">
+        Web Apps Developed by me.
+      </div>
     </div>
     <div style="margin-left: 30px; margin-right: 30px;" class="jumbotron">
       <h1 id="redirect" class="display-4">ReadX</h1>
@@ -146,7 +139,7 @@
         class="btn btn-primary btn-lg"
         href="/readx"
         role="button"
-        >Launch</a
+        >Launch <i class="fas fa-external-link-alt"></i></a
       >
     </div>
     <div style="margin-left: 30px; margin-right: 30px;" class="jumbotron">
@@ -159,21 +152,13 @@
         class="btn btn-primary btn-lg"
         href="/enkrypt"
         role="button"
-        >Launch</a
+        >Launch <i class="fas fa-external-link-alt"></i></a
       >
     </div>
-    <div
-      id="about"
-      style="
-        text-align: center;
-        margin-right: 40px;
-        margin-left: 40px;
-        margin-bottom: 30px;
-      "
-      class="alert alert-warning"
-      role="alert"
-    >
-      My Certifications
+    <div style="margin-bottom:30px;margin-left: 30px;margin-right: 30px; background-color:rgba(0, 66, 248, 0.247);" class="card">
+      <div style="text-align: center;" class="card-body">
+        My Certifications
+      </div>
     </div>
     <div style="text-align: center;" class="alig">
       <d style="margin: 30px;" class="row">
