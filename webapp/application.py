@@ -110,9 +110,17 @@ def login_details():
             return render_template("admin.html", users=users, usercount=usercount)
         if log_check(username, password):
             logged = True
-            return render_template("homepage2.html")
+            return redirect("/homepage_connex")
         else:
             return render_template("loginfail.html")
+
+
+@app.route("/homepage_connex")
+def conhome():
+    if logged == True:
+        return render_template("homepage2.html")
+    else:
+        return render_template("newlogin.html", error="Please login to continue.")
 
 
 @app.route("/otp", methods=["GET", "POST"])
@@ -317,6 +325,7 @@ def decrypt(text, key="ZXCVMNBLKJFGHDSAQWEYTRUIOP"):
 
 @app.route("/enkrypt")
 def homeencry():
+    global logged
     if logged == True:
         return render_template("en-home.html")
     else:

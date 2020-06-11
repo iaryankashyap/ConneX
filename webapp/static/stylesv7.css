@@ -6,6 +6,10 @@ textarea::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.603) !important;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #172be6, #23d5ab);
   background-size: 400% 400%;
