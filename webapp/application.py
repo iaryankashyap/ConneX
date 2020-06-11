@@ -23,6 +23,16 @@ def getusers():
     sqcon.close()
     return users
 
+def getemails():
+    sqcon = sq.connect(host='connex.mysql.pythonanywhere-services.com', database='connex$users',
+                       user='connex', password='rootrootroot')
+    cursor = sqcon.cursor()
+    emails = []
+    cursor.execute("SELECT * FROM users")
+    for i in cursor:
+        emails.append(i[2])
+    sqcon.close()
+    return emails
 
 def usercoun():
     sqcon = sq.connect(host='connex.mysql.pythonanywhere-services.com', database='connex$users',
@@ -107,7 +117,8 @@ def login_details():
             logged = True
             users = getusers()
             usercount = usercoun()
-            return render_template("admin.html", users=users, usercount=usercount)
+            emails = getemails()
+            return render_template("admin.html", users=users, usercount=usercount,emails=emails)
         if log_check(username, password):
             logged = True
             return redirect("/homepage_connex")
