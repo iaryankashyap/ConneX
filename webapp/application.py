@@ -89,10 +89,7 @@ def log_check(username, password):
 
 @app.route("/")
 def login():
-    if logged == False:
-        return render_template(loginpage)
-    else:
-        return render_template("homepage2.html")
+    return render_template(loginpage)
 
 
 @app.route("/signup")
