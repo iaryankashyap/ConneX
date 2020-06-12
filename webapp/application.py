@@ -102,8 +102,9 @@ def log_check(username, password):
 def getmessage(username, email, add1, add2, zipp, city, state):
 
     f = open("messageconnex.txt", "a")
-    content = "Username:"+username+"\nE-mail:"+email+"\nAddress:"+add1 + \
-        "\nAddress2:"+add2+"\nCity:"+city+"\nState:"+state+"\nZip Code:"+zipp+"\n\n"
+    temp = "Username:"+username+"\nE-mail:"+email+"\nAddress:"
+    temp2 = add1 + "\nAddress2:"+add2+"\nCity:"+city+"\nState:"
+    content = temp+temp2+state+"\nZip Code:"+zipp+"\n\n"
     f.write(content)
     f.close()
     return
