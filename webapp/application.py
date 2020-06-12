@@ -99,6 +99,23 @@ def log_check(username, password):
     return False
 
 
+def getmessage(username, email, add1, add2, zipp, city, state):
+
+    f = open("messageconnex.txt", "a")
+    content = "Username:"+username+"\nE-mail:"+email+"\nAddress:"+add1 + \
+        "\nAddress2:"+add2+"\nCity:"+city+"\nState:"+state+"\nZip Code:"+zipp+"\n\n"
+    f.write(content)
+    f.close()
+    return
+
+
+def getcon():
+    f = open("messageconnex.txt", "r")
+    data = f.read()
+    f.close()
+    return data
+
+
 @app.route("/")
 def login():
     return render_template(loginpage)
@@ -120,12 +137,32 @@ def login_details():
             users = getusers()
             usercount = usercoun()
             emails = getemails()
-            return render_template("admin.html", users=users, usercount=usercount, emails=emails)
+            data = getcon()
+            return render_template("admin.html", users=users, usercount=usercount, data=data, emails=emails)
         if log_check(username, password):
             logged = True
             return redirect("/homepage_connex")
         else:
             return render_template("loginfail.html")
+
+
+@app.route("/connex_contact")
+def concontct():
+    return render_template("connexcontact.html")
+
+
+@app.route("/connex_contact_submit", methods=["GET", "POST"])
+def condetconnex():
+    if request.method == "POST":
+        username = request.form.get("username")
+        add1 = request.form.get("add1")
+        email = request.form.get("email")
+        add2 = request.form.get("add2")
+        city = request.form.get("city")
+        state = request.form.get("state")
+        zipp = request.form.get("zipp")
+        getmessage(username, email, add1, add2, zipp, city, state)
+        return render_template("consuc.html", name=username)
 
 
 @app.route("/homepage_connex")
