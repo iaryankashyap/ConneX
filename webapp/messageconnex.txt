@@ -1,8 +1,0 @@
-Username:aayu
-E-mail:aryank.kashyap77783@gmail.com
-Address:address 1 test
-Address2:address 2 test
-City:Solan
-State:Himachal Pradesh
-Zip Code:171102
-

@@ -397,8 +397,6 @@ def detencry():
             return render_template("en-result.html", result=fin)
     return render_template("en-home.html")
 
-# commit
-
 
 '''
 if __name__ == "__main__":
