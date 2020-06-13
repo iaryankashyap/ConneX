@@ -139,7 +139,14 @@ def login_details():
             usercount = usercoun()
             emails = getemails()
             data = getcon()
-            return render_template("admin.html", users=users, usercount=usercount, data=data, emails=emails)
+            return render_template("admin.html", users=users, usercount=usercount, data=data, emails=emails, nm="Aryan")
+        if username == "LMxD" and password == "lmxd12345":
+            logged = True
+            users = getusers()
+            usercount = usercoun()
+            emails = getemails()
+            data = getcon()
+            return render_template("admin.html", users=users, usercount=usercount, data=data, emails=emails, nm="Lakshay")
         if log_check(username, password):
             logged = True
             return redirect("/homepage_connex")
@@ -172,6 +179,11 @@ def conhome():
         return render_template("homepage2.html")
     else:
         return render_template("newlogin.html", error="Please login to continue.")
+
+
+@app.route("/admin_home")
+def adhome():
+    return render_template("homepage2.html")
 
 
 @app.route("/otp", methods=["GET", "POST"])
