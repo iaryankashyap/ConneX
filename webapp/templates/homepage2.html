@@ -7,14 +7,17 @@
       href="../static/favicon.ico"
       type="image/x-icon"
     />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
 
     <style>  
       .jumbotron{
+        
         transition: ease 0.4s;
       }
       .jumbotron:hover{
         background-color: black;
         color: white;
+        border-top: 15px solid #007bff;
       }
       #buttonn{
         transition: ease 0.4s;
@@ -26,12 +29,15 @@
       }
 
       #car{
-        transition: ease 0.2s;
+        transition: ease-in 0.1s;
         background-color: black;
+        border-left: #007bff 5px solid;
+        border-radius: 3px;
       }
 
       #car:hover{
-        background-color: rgba(0, 0, 0, 0.192);
+        background-color: black;
+        border-left: #007bff 15px solid;
       }
 
       #but2{
@@ -127,16 +133,16 @@
         </ul>
 
         <a href="/logout"
-          ><button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+          ><button class="btn btn-outline-light  my-2 my-sm-0" type="submit">
             Logout <i class="fas fa-sign-out-alt"></i>
           </button></a
         >
       </div>
     </nav>
 
-    <div style="margin: 30px;" class="row">
+    <div style="margin: 30px; border: none;" class="row">
       <div class="col-sm-6">
-        <div style="margin-bottom: 30px;" class="card bg-dark text-light">
+        <div style="margin-bottom: 30px; border: none;" class="card bg-dark text-light">
           <div id="car" class="card-body">
             <h5 class="card-title">
               Source Codes
@@ -154,7 +160,7 @@
         </div>
       </div>
       <div class="col-sm-6">
-        <div class="card bg-dark text-light">
+        <div style="border: none;" class="card bg-dark text-light">
           <div id="car" class="card-body">
             <h5 class="card-title">Follow</h5>
             <p class="card-text">
@@ -170,9 +176,11 @@
         </div>
       </div>
     </div>
-    <div style="margin-bottom:30px;margin-left: 30px;margin-right: 30px;background-color:rgba(0, 66, 248, 0.247);" class="card">
-      <div style="text-align: center;" class="card-body">
+    <div style="margin-bottom:30px;margin-left: 30px;margin-right: 30px;" class="card">
+      <div style="text-align: center;" class="card-body text-dark rounded">
+         
         Web Apps Developed by me.
+        
       </div>
     </div>
     <div style="margin-left: 30px; margin-right: 30px;" class="jumbotron">
@@ -203,46 +211,7 @@
         >Launch <i class="fas fa-external-link-alt"></i></a
       >
     </div>
-    <div style="margin-bottom:30px;margin-left: 30px;margin-right: 30px; background-color:rgba(0, 66, 248, 0.247);" class="card">
-      <div style="text-align: center;" class="card-body">
-        My Certifications
-      </div>
-    </div>
-    <div style="text-align: center;" class="alig">
-      <d style="margin: 30px;" class="row">
-        
-          <blockquote class="twitter-tweet">
-            <p lang="en" dir="ltr">
-              Completed cs50. May 20,2020<br /><br />Thank you to David and
-              brian for making it possible.
-              <a href="https://t.co/F5fEhUY1IB">pic.twitter.com/F5fEhUY1IB</a>
-            </p>
-            &mdash; Aryan Kashyap (@imaryankashyap)
-            <a
-              href="https://twitter.com/imaryankashyap/status/1265510168449728519?ref_src=twsrc%5Etfw"
-              >May 27, 2020</a
-            >
-          </blockquote>
-        
-        <blockquote class="twitter-tweet">
-          <p lang="en" dir="ltr">
-            Completed &quot;The Fundamentals of Digital Marketing&quot; from
-            Google Digital Unlocked. May 23, 2020
-            <a href="https://t.co/pXn6sRifDS">pic.twitter.com/pXn6sRifDS</a>
-          </p>
-          &mdash; Aryan Kashyap (@imaryankashyap)
-          <a
-            href="https://twitter.com/imaryankashyap/status/1265510692603527168?ref_src=twsrc%5Etfw"
-            >May 27, 2020</a
-          >
-        </blockquote>
-        <script
-          async
-          src="https://platform.twitter.com/widgets.js"
-          charset="utf-8"
-        ></script>
-      </div>
-    </div>
+    
     <div style="margin: 20px;" class="border"></div>
     <div
       style="color: black; text-align: center; margin-bottom: 20px;"
