@@ -10,14 +10,28 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
 
     <style>  
+
+.dropdown-item{
+  transition: ease-in-out 0.3s;
+
+
+}
+.dropdown-item:hover{
+  background-color: #007bff;
+}
+
+
+
       .jumbotron{
         
         transition: ease 0.4s;
       }
+
       .jumbotron:hover{
         background-color: black;
-        color: white;
+        color: #007bff;
         border-top: 15px solid #007bff;
+        box-shadow:2px 2px 10px rgba(0, 0, 0, 0.377);
       }
       #buttonn{
         transition: ease 0.4s;
@@ -26,6 +40,7 @@
         border-color: white;
         background-color: white;
         color: #007bff;
+        border-radius: 100px;
       }
 
       #car{
@@ -33,11 +48,23 @@
         background-color: black;
         border-left: #007bff 5px solid;
         border-radius: 3px;
+        animation: myan;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes myan {
+        0%{background-color: black;}
+        50%{background-color: #1a1a1a;}
+        100%{background-color: black;}
+
       }
 
       #car:hover{
         background-color: black;
         border-left: #007bff 15px solid;
+        color: #007bff;
+        box-shadow:6px 5px 8px rgba(0, 0, 0, 0.445);
       }
 
       #but2{
@@ -51,7 +78,14 @@
         background-color: #007bff;
         color: white;
         border-color: #007bff;
+        border-radius: 200px;
       }
+
+.nav{
+  color: tomato;
+}
+
+
     </style>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -103,9 +137,7 @@
           <li class="nav-item active">
             <a href="/homepage_connex" class="nav-link"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item active">
-            <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About </a>
-          </li>
+          
 
           <li class="nav-item active dropdown">
             <a
