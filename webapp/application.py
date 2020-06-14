@@ -159,6 +159,35 @@ def concontct():
     return render_template("connexcontact.html")
 
 
+@app.route("/forgot_connex")
+def conforget():
+    return render_template("forgot.html")
+
+
+@app.route("/forgot_details", methods=["GET", "POST"])
+def fordet():
+    if request.method == "POST":
+        username = request.form.get("username")
+        email = request.form.get("email")
+        password = request.form.get("newpassword")
+        if checkuser(username) and checkemail(email):
+            regnewpass(username, password)
+            return render_template("newlogin.html", error="Your Password changed successfully, please login with your new credentials.")
+
+        else:
+            return render_template("newlogin.html", error="Sorry, no such username or email found in database.")
+
+
+def regnewpass(username, password):
+    sqcon = sq.connect(host='connex.mysql.pythonanywhere-services.com', database='connex$users',
+                       user='connex', password='rootrootroot')
+    cursor = sqcon.cursor()
+    query = "UPDATE users SET password='"+password+"' WHERE username='"+username+"'"
+    cursor.execute(query)
+    sqcon.commit()
+    sqcon.close()
+
+
 @app.route("/connex_contact_submit", methods=["GET", "POST"])
 def condetconnex():
     if request.method == "POST":
