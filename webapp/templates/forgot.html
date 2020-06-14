@@ -21,9 +21,18 @@
     <div class="container">
       <div class="img"></div>
       <div class="login-content">
-        <form action="/login_details" method="POST">
+        <form action="/forgot_details" method="POST">
           <img src="../static/avatar.png" />
-          <h2 class="title">Login</h2>
+          <h2 class="title"></h2>
+          <div class="input-div one">
+            <div class="i">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="div">
+              <h5>E-mail</h5>
+              <input name="email" type="text" class="input" />
+            </div>
+          </div>
           <div class="input-div one">
             <div class="i">
               <i class="fas fa-user"></i>
@@ -38,20 +47,17 @@
               <i class="fas fa-lock"></i>
             </div>
             <div class="div">
-              <h5>Password</h5>
-              <input name="password" type="password" class="input" />
+              <h5>New Password</h5>
+              <input name="newpassword" type="password" class="input" />
             </div>
           </div>
           <button type="submit" class="btn">
-            LOGIN <i class="fas fa-sign-in-alt"></i>
+            Reset <i class="fas fa-sync-alt"></i>
           </button>
-          <a href="forgot_connex"><h4 class="head">Forgot Password?</h4></a>
-          <h5 class="new_head">
-            Don't have an account? <a class="sig" href="/signup">Sign Up</a>
-          </h5>
         </form>
       </div>
     </div>
+    <br /><br />
     <script type="text/javascript" src="../static/main.js"></script>
   </body>
 </html>
