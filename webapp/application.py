@@ -167,22 +167,23 @@ def conforget():
 @app.route("/forgot_details", methods=["GET", "POST"])
 def fordet():
     if request.method == "POST":
-        username = request.form.get("username")
-        email = request.form.get("email")
-        password = request.form.get("newpassword")
-        if checkuser(username) and checkemail(email):
-            regnewpass(username, password)
+        username2 = request.form.get("username")
+        email2 = request.form.get("email")
+        password2 = request.form.get("newpassword")
+        if checkuser(username2) == False and checkemail(email2) == False:
+            regnewpass(username2, password2)
             return render_template("newlogin.html", error="Your Password changed successfully, please login with your new credentials.")
 
         else:
             return render_template("newlogin.html", error="Sorry, no such username or email found in database.")
 
 
-def regnewpass(username, password):
+def regnewpass(username2, password2):
     sqcon = sq.connect(host='connex.mysql.pythonanywhere-services.com', database='connex$users',
                        user='connex', password='rootrootroot')
     cursor = sqcon.cursor()
-    query = "UPDATE users SET password='"+password+"' WHERE username='"+username+"'"
+    query = "UPDATE users SET password='" + \
+        password2+"' WHERE username='"+username2+"'"
     cursor.execute(query)
     sqcon.commit()
     sqcon.close()
