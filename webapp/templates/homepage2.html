@@ -16,14 +16,81 @@
 
 
 }
+
+#io{
+  color: transparent;
+  border-color: transparent;
+  animation: myan4;
+  animation-delay: 3s;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transition: ease 0.4s;
+}
+.i{
+  border: 1px solid;
+  border-color: transparent;
+  animation: myan4;
+  animation-delay: 3s;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transition: ease 0.4s;
+}
+@keyframes myan4 {
+        0%{}
+        
+        100%{color: white; border-color: white;}
+
+      }
+
+@keyframes myan3 {
+        0%{}
+        
+        100%{background-color: black;color: white;}
+
+      }
 .dropdown-item:hover{
   background-color: #007bff;
 }
 
+@keyframes myan3 {
+        0%{}
+        
+        100%{background-color: black;color: white;}
+
+      }
+.navbar{
+  background-color: #007bff;
+  animation: myan3;
+  box-shadow:6px 5px 8px rgba(255, 255, 255, 0.445);
+        animation-delay: 1s;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        transition: ease 0.4s;
+}
+@keyframes myan {
+        0%{background-color: #e9ecef;color: black;}
+        60%{color: white;}
+        100%{background-color: black;color: white;}
+
+      }
+      @keyframes myan5 {
+        0%{}
+        20%{color: black;}
+        100%{background-color: rgb(255, 255, 255);color: #000000;border-color: white;}
+
+      }
 
 
       .jumbotron{
+        animation: myan;
         
+        animation-delay: 1s;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
         transition: ease 0.4s;
       }
 
@@ -45,20 +112,17 @@
 
       #car{
         transition: ease-in 0.1s;
-        background-color: black;
+        background-color: #e9ecef;
         border-left: #007bff 5px solid;
         border-radius: 3px;
         animation: myan;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
+        animation-delay: 1s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
       }
 
-      @keyframes myan {
-        0%{background-color: black;}
-        50%{background-color: #1a1a1a;}
-        100%{background-color: black;}
 
-      }
 
       #car:hover{
         background-color: black;
@@ -68,10 +132,15 @@
       }
 
       #but2{
-        background-color: white;
-        color: black;
+        background-color:#007bff;
+        color:white;
         transition: ease 0.4s;
-        border-color:white;
+        border-color:#007bff;
+        animation: myan5;
+        animation-delay: 1s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
       }
 
       #but2:hover{
@@ -81,9 +150,27 @@
         border-radius: 200px;
       }
 
-.nav{
-  color: tomato;
-}
+      #opop{
+        color: black;
+        font-family: Century Gothic;
+        font-size: 20px;
+        animation: myan2;
+        animation-delay: 1s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        border: 3px white solid;
+      }
+
+      @keyframes myan2 {
+        0%{background-color: #ffffff;}
+        50%{color: white; border-color: white;
+        }
+        100%{background-color: black;color: white;border-color: #007bff;}
+
+      }
+
+
 
 
     </style>
@@ -115,7 +202,7 @@
   </head>
   <body>
     <nav
-      class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary"
+      class="navbar sticky-top navbar-expand-lg navbar-dark"
     >
       <a class="navbar-brand" href="/homepage_connex"
         >ConneX</a
@@ -158,8 +245,17 @@
             
           </li>
           <li class="nav-item active">
-            <a href="/connex_contact" class="nav-link"><i class="fas fa-envelope"></i></i> Contact Us </a>
+            <a href="/connex_contact" class="nav-link"><i class="fas fa-envelope"></i></i> Contact Us     </a>
           </li>
+          <li class="nav-item active">
+            <a style="text-indent: 117px;" class="nav-link"><span class="sr-only">(current)</span></a>
+          </li>
+          <div class="i">
+          <li class="nav-item active">
+            <a id="io" class="nav-link"><i class="fas fa-hashtag"></i> B L A C K  L I V E S  M A T T E R <span class="sr-only">(current)</span></a>
+          </li>
+          
+        </div>
           
           
         </ul>
@@ -174,13 +270,13 @@
 
     <div style="margin: 30px; border: none;" class="row">
       <div class="col-sm-6">
-        <div style="margin-bottom: 30px; border: none;" class="card bg-dark text-light">
+        <div style="margin-bottom: 30px; border: none;" class="card">
           <div id="car" class="card-body">
             <h5 class="card-title">
               Source Codes
             </h5>
             <p class="card-text">
-              Get the source code on GitHub.
+              Get the code on GitHub.
             </p>
             <a
               href="https://www.github.com/iaryankashyap"
@@ -192,7 +288,7 @@
         </div>
       </div>
       <div class="col-sm-6">
-        <div style="border: none;" class="card bg-dark text-light">
+        <div style="border: none;" class="card">
           <div id="car" class="card-body">
             <h5 class="card-title">Follow</h5>
             <p class="card-text">
@@ -209,9 +305,9 @@
       </div>
     </div>
     <div style="margin-bottom:30px;margin-left: 30px;margin-right: 30px;" class="card">
-      <div style="text-align: center;" class="card-body text-dark rounded">
+      <div id="opop" style="text-align: center;" class="card-body rounded">
          
-        Web Apps Developed by me.
+        My WebApps
         
       </div>
     </div>
