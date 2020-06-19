@@ -21,7 +21,7 @@ for tweet in tweepy.Cursor(api.search, search).items(nrTweets):
         n = n+1
         print('Tweet Liked', n)
         time.sleep(60)
-        if n == 100 or n == 200 or n == 300 or n == 400 or n == 500:
+        if n % 100 == 0:
             time.sleep(600)
     except tweepy.TweepError as e:
         print(e.reason)
