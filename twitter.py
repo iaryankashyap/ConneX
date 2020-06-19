@@ -11,7 +11,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 user = api.me()
 
 search = '100DaysOfCode'
-nrTweets = 5000
+nrTweets = 2000
 n = 0
 for tweet in tweepy.Cursor(api.search, search).items(nrTweets):
     try:
