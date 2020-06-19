@@ -11,8 +11,8 @@ api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 user = api.me()
 
 search = '100DaysOfCode'
-nrTweets = 1000
-n = 38
+nrTweets = 5000
+n = 0
 for tweet in tweepy.Cursor(api.search, search).items(nrTweets):
     try:
 
@@ -21,6 +21,8 @@ for tweet in tweepy.Cursor(api.search, search).items(nrTweets):
         n = n+1
         print('Tweet Liked', n)
         time.sleep(60)
+        if n == 100 or n == 200 or n == 300 or n == 400 or n == 500:
+            time.sleep(600)
     except tweepy.TweepError as e:
         print(e.reason)
 
