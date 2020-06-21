@@ -1,8 +1,8 @@
 # ConneX
 
-![login](https://img.shields.io/github/license/mashape/apistatus.svg)
+![License](https://img.shields.io/badge/License-Apache-brightgreen)
 <img src="https://img.shields.io/badge/made%20with-Flask-blue.svg" alt="made with Flask">
-<img src="https://img.shields.io/github/contributors/cdnjs/cdnjs.svg" alt="Contributions">
+<img src="https://img.shields.io/badge/Contributors-2-blue" alt="Contributions">
 <img src="https://img.shields.io/badge/Creator-Aryan%20Kashyap-blueviolet" alt="Aryan Kashyap">
 
 <br>
@@ -17,7 +17,7 @@ I made this project during my #100DaysOfCode challenge.
 
 <h3>Screenshots:</h3>
 
-> The website is responsive.
+> The website is responsive. 
 
 <h2>Login Page:</h2>
 
