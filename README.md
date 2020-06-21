@@ -1,5 +1,7 @@
 # ConneX
 
+![login](https://img.shields.io/github/license/mashape/apistatus.svg)
+<img src="https://img.shields.io/badge/made%20with-python-blue.svg" alt="made with python">
 ConneX is my personal web-app collection website.
 
 I made this project during my #100DaysOfCode challenge.
@@ -20,6 +22,8 @@ I made this project during my #100DaysOfCode challenge.
 <h2>SignUp Page:</h2>
 
 ![signup](/screenshots/signup.png)
+
+<h3>Contributions:</h3>
 
 <h3>License:</h3>
 
