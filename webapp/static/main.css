@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Century Gothic', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-y: hidden;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(35%, #02020b), color-stop(100%, #0d0d47), to(#00d4ff));
+  background: linear-gradient(180deg, #02020b 35%, #0d0d47 100%, #00d4ff 100%);
+  position: relative;
+}
+
+.wrapper .star {
+  position: absolute;
+  right: 80px;
+  top: 50px;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 0px 37px 16px #eee6e7;
+          box-shadow: 2px 0px 37px 16px #eee6e7;
+}
+
+.wrapper .moon {
+  background: #dcdcdcc4;
+  position: absolute;
+  top: 20px;
+  right: 80px;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.wrapper .moon::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #02020b;
+  border-radius: 50%;
+  position: absolute;
+  right: 0.75rem;
+  -webkit-box-shadow: 10px 0 5px -2px #888;
+          box-shadow: 10px 0 5px -2px #888;
+}
+
+.wrapper .moon .bar {
+  background: #46444b;
+  width: 10px;
+  height: 1px;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+}
+
+.wrapper .moon .bar::before, .wrapper .moon .bar::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  background: inherit;
+}
+
+.wrapper .moon .bar::before {
+  width: 12px;
+  top: -1.75rem;
+  right: 1rem;
+}
+
+.wrapper .moon .bar::after {
+  width: 120%;
+  top: 2.15rem;
+  right: 2.25rem;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.main__header {
+  height: 18vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__header .logo {
+  color: #ffffff;
+  margin-left: 5%;
+}
+
+.main__header .logo h2 {
+  font-weight: 200;
+  font-size: 1.75rem;
+}
+
+.main__showcase {
+  width: 100vw;
+  height: 82vh;
+  padding: 0 1rem;
+  color: #ffffff;
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+}
+
+.main__showcase--content {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  text-align: center;
+  font-weight: 200;
+  font-size: 3.25rem;
+  line-height: 2.5;
+}
+
+.main__showcase--btns {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.main__showcase--btns .btn {
+  display: inline-block;
+  width: 150px;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 0.5rem 2rem;
+  margin: 0 0.5rem;
+  border-radius: 25px;
+}
+/*# sourceMappingURL=main.css.map */
