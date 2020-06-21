@@ -17,7 +17,7 @@ I made this project during my #100DaysOfCode challenge.
 
 <h3>Screenshots:</h3>
 
-> The website is responsive. 
+> The website is responsive.
 
 <h2>Login Page:</h2>
 
@@ -29,7 +29,8 @@ I made this project during my #100DaysOfCode challenge.
 
 <h3>Contributions:</h3>
 
-<a href="https://github.com/TutulDevs">@TutulDevs</a> : Landing page
+<a href="https://github.com/TutulDevs">@TutulDevs</a> : Landing page.
+<a href="https://github.com/LaasriNadia">@LaasriNadia</a> : Landing page Background.
 
 <h3>License:</h3>
 
