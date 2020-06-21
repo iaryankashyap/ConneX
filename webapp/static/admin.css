@@ -1,0 +1,7 @@
+.jumbotron {
+  background-color: black;
+  transition: ease 0.2s;
+}
+.jumbotron:hover {
+  border-left: 10px solid #007bff;
+}

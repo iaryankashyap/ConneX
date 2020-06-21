@@ -1,0 +1,182 @@
+.dropdown-item {
+  transition: ease-in-out 0.3s;
+}
+
+#io {
+  color: transparent;
+  border-color: transparent;
+  animation: myan4;
+  animation-delay: 3s;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition: ease 0.4s;
+}
+.i {
+  border: 1px solid;
+  border-color: transparent;
+  animation: myan4;
+  animation-delay: 3s;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition: ease 0.4s;
+}
+@keyframes myan4 {
+  0% {
+  }
+
+  100% {
+    color: white;
+    border-color: white;
+  }
+}
+
+@keyframes myan3 {
+  0% {
+  }
+
+  100% {
+    background-color: black;
+    color: white;
+  }
+}
+.dropdown-item:hover {
+  background-color: #007bff;
+}
+
+@keyframes myan3 {
+  0% {
+  }
+
+  100% {
+    background-color: black;
+    color: white;
+  }
+}
+.navbar {
+  background-color: #007bff;
+  animation: myan3;
+  box-shadow: 6px 5px 8px rgba(255, 255, 255, 0.445);
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition: ease 0.4s;
+}
+@keyframes myan {
+  0% {
+    background-color: #e9ecef;
+    color: black;
+  }
+  60% {
+    color: white;
+  }
+  100% {
+    background-color: black;
+    color: white;
+  }
+}
+@keyframes myan5 {
+  0% {
+  }
+  20% {
+    color: black;
+  }
+  100% {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border-color: white;
+  }
+}
+
+.jumbotron {
+  animation: myan;
+
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition: ease 0.4s;
+}
+
+.jumbotron:hover {
+  background-color: black;
+  color: #007bff;
+  border-top: 15px solid #007bff;
+  box-shadow: 6px 5px 8px rgba(0, 0, 0, 0.445);
+}
+#buttonn {
+  transition: ease 0.4s;
+}
+#buttonn:hover {
+  border-color: white;
+  background-color: white;
+  color: #007bff;
+  border-radius: 100px;
+}
+
+#car {
+  transition: ease-in 0.1s;
+  background-color: #e9ecef;
+  border-left: #007bff 5px solid;
+  border-radius: 3px;
+  animation: myan;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+#car:hover {
+  background-color: black;
+  border-left: #007bff 15px solid;
+  color: #007bff;
+  box-shadow: 6px 5px 8px rgba(0, 0, 0, 0.445);
+}
+
+#but2 {
+  background-color: #007bff;
+  color: white;
+  transition: ease 0.4s;
+  border-color: #007bff;
+  animation: myan5;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+#but2:hover {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  border-radius: 200px;
+}
+
+#opop {
+  color: black;
+  font-family: Century Gothic;
+  font-size: 20px;
+  animation: myan2;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  border: 2px white solid;
+}
+
+@keyframes myan2 {
+  0% {
+    background-color: #ffffff;
+  }
+  50% {
+    color: white;
+    border-color: white;
+  }
+  100% {
+    background-color: black;
+    color: white;
+    border-color: #15ff00;
+  }
+}
