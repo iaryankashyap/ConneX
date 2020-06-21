@@ -15,13 +15,12 @@ nrTweets = 9000
 n = 0
 for tweet in tweepy.Cursor(api.search, search).items(nrTweets):
     try:
-
         tweet.favorite()
         tweet.retweet()
         n = n+1
         print('Tweet Liked', n)
-        time.sleep(60)
-        if n % 100 == 0:
+        time.sleep(90)
+        if n % 100 == 0 or n % 1000 == 0:
             time.sleep(600)
     except tweepy.TweepError as e:
         print(e.reason)
