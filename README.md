@@ -1,7 +1,11 @@
 # ConneX
 
 ![login](https://img.shields.io/github/license/mashape/apistatus.svg)
-<img src="https://img.shields.io/badge/made%20with-Flask-blue.svg" alt="made with Flask"><br>
+<img src="https://img.shields.io/badge/made%20with-Flask-blue.svg" alt="made with Flask">
+<img src="https://img.shields.io/github/contributors/cdnjs/cdnjs.svg" alt="Contributions">
+<img src="https://img.shields.io/badge/Creator-Aryan%20Kashyap-blueviolet" alt="Aryan Kashyap">
+
+<br>
 ConneX is my personal web-app collection website.
 
 I made this project during my #100DaysOfCode challenge.
@@ -24,6 +28,8 @@ I made this project during my #100DaysOfCode challenge.
 ![signup](/screenshots/signup.png)
 
 <h3>Contributions:</h3>
+
+<a href="https://github.com/TutulDevs">@TutulDevs</a> : Landing page
 
 <h3>License:</h3>
 
