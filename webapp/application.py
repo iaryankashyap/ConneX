@@ -1,6 +1,5 @@
 import mysql.connector as sq
 
-import smtplib
 import random
 from flask import Flask, flash, request, redirect, render_template
 global logged
