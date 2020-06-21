@@ -1,0 +1,24 @@
+$white: #ffffff;
+$fwl: 200;
+
+@mixin radius($radius) {
+    border-radius: $radius;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Century Gothic', Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    overflow-y: hidden;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
