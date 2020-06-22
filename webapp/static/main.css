@@ -10,6 +10,7 @@ body {
   font-size: 15px;
   line-height: 1.5;
   overflow-y: hidden;
+  background: #0c0c41;
 }
 
 a {
@@ -28,8 +29,8 @@ a {
 
 .wrapper .star {
   position: absolute;
-  right: 80px;
-  top: 50px;
+  right: 5.3rem;
+  top: 3.3rem;
   width: 2px;
   height: 2px;
   background: white;
@@ -41,15 +42,15 @@ a {
 .wrapper .moon {
   background: #dcdcdcc4;
   position: absolute;
-  top: 20px;
-  right: 80px;
+  top: 1.3rem;
+  right: 5.3rem;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
 }
 
 .wrapper .moon::before {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
@@ -71,7 +72,7 @@ a {
 }
 
 .wrapper .moon .bar::before, .wrapper .moon .bar::after {
-  content: '';
+  content: "";
   position: absolute;
   height: 1px;
   background: inherit;
@@ -156,5 +157,38 @@ a {
   padding: 0.5rem 2rem;
   margin: 0 0.5rem;
   border-radius: 25px;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+  }
+  .main {
+    width: 100vw;
+    height: 100vh;
+  }
+  .main__showcase--content {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+  .main__showcase--btns .btn {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper .star {
+    right: 3rem;
+  }
+  .wrapper .moon {
+    background: #dcdcdcc4;
+    position: absolute;
+    top: 20px;
+    right: 3.05rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

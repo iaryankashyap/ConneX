@@ -13,8 +13,8 @@
 
   .star {
     position: absolute;
-    right: 80px;
-    top: 50px;
+    right: 5.3rem;
+    top: 3.3rem;
     width: 2px;
     height: 2px;
     background: white;
@@ -25,8 +25,8 @@
   .moon {
     background: #dcdcdcc4;
     position: absolute;
-    top: 20px;
-    right: 80px;
+    top: 1.3rem;
+    right: 5.3rem;
     width: 5rem;
     height: 5rem;
     @include radius(50%);
@@ -130,4 +130,48 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+  }
+    
+  .main {
+    width: 100vw;
+    height: 100vh;
+
+    &__showcase {
+      &--content {
+        align-self: center;
+        font-size: 3rem;
+        line-height: 1.5;
+      }
+
+      &--btns {
+        .btn {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+    
+  .wrapper {
+
+    .star {
+      right: 3rem;
+    }
+
+    .moon {
+      background: #dcdcdcc4;
+      position: absolute;
+      top: 20px;
+      right: 3.05rem;
+    }
+  }
+
 }
