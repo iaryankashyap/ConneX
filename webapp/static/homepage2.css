@@ -177,6 +177,53 @@
   100% {
     background-color: black;
     color: white;
-    border-color: #15ff00;
+  }
+}
+
+#floating-btn {
+  width: 0px;
+  height: 0px;
+  background-color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 0px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
+  position: fixed;
+  right: 40px;
+  bottom: 20px;
+  transition: ease-in-out 0.25s;
+  animation: myy;
+  animation-delay: 3s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+#floating-btn:hover {
+  background-color: #0053ac;
+  color: white;
+  rotate: 20%;
+}
+
+@keyframes myy {
+  0% {
+    width: 0px;
+    height: 0px;
+    font-size: 0px;
+  }
+  70% {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    font-size: 0px;
+  }
+  100% {
+    visibility: visible;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
   }
 }
