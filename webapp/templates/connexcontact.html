@@ -10,16 +10,317 @@
 
     <style>
 
-        .card{
+        
+
+        * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Century Gothic", Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-y: hidden;
+  background: #0c0c41;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(35%, #02020b),
+    color-stop(100%, #0d0d47),
+    to(#00d4ff)
+  );
+  background: linear-gradient(180deg, #02020b 35%, #0d0d47 100%, #00d4ff 100%);
+  position: relative;
+}
+
+#newbut:hover{
+  background-color: #ffffff !important;
+  color: #14af5a;
+}
+
+.wrapper .star {
+  position: absolute;
+  right: 5.3rem;
+  top: 3.3rem;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 0px 37px 16px #eee6e7;
+  box-shadow: 2px 0px 37px 16px #eee6e7;
+}
+
+.wrapper .moon {
+  background: #dcdcdcc4;
+  position: absolute;
+  top: 1.3rem;
+  right: 5.3rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.wrapper .moon::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #02020b;
+  border-radius: 50%;
+  position: absolute;
+  right: 0.75rem;
+  -webkit-box-shadow: 10px 0 5px -2px #888;
+  box-shadow: 10px 0 5px -2px #888;
+}
+
+.wrapper .moon .bar {
+  background: #46444b;
+  width: 10px;
+  height: 1px;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+}
+
+.wrapper .moon .bar::before,
+.wrapper .moon .bar::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: inherit;
+}
+
+.wrapper .moon .bar::before {
+  width: 12px;
+  top: -1.75rem;
+  right: 1rem;
+}
+
+.wrapper .moon .bar::after {
+  width: 120%;
+  top: 2.15rem;
+  right: 2.25rem;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.main__header {
+  height: 18vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main__header .logo {
+  color: #ffffff;
+  margin-left: 5%;
+}
+
+.main__header .logo h2 {
+  font-weight: 200;
+  font-size: 1.75rem;
+}
+
+.main__showcase {
+  width: 100vw;
+  height: 82vh;
+  padding: 0 1rem;
+  color: #ffffff;
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+}
+
+.main__showcase--content {
+  -ms-flex-item-align: end;
+  -ms-grid-row-align: end;
+  align-self: end;
+  text-align: center;
+  font-weight: 200;
+  font-size: 3.25rem;
+  line-height: 2.5;
+}
+
+.main__showcase--btns {
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start;
+}
+
+.main__showcase--btns .btn {
+  display: inline-block;
+  width: 150px;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 0.5rem 2rem;
+  margin: 0 0.5rem;
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+  }
+  .main {
+    width: 100vw;
+    height: 100vh;
+  }
+  .main__showcase--content {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+  .main__showcase--btns .btn {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper .star {
+    right: 3rem;
+  }
+  .wrapper .moon {
+    background: #dcdcdcc4;
+    position: absolute;
+    top: 20px;
+    right: 3.05rem;
+  }
+}
+
+#but:hover {
+  box-shadow: 0px 0px 5px white;
+}
+
+#floating-btn {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  background-color: #a5a5a5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: #0c0c40;
+  font-size: 0px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
+  position: fixed;
+  right: 40px;
+  bottom: 20px;
+  transition: ease-in-out 0.25s;
+  animation: myyy;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+#floating-btn:hover {
+  background-color: #0c0c40;
+  color: white;
+  rotate: 20%;
+  box-shadow: 0px 0px 5px white;
+}
+
+#floating-btn2 {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  background-color: #a5a5a5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: #0c0c40;
+  font-size: 0px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
+  position: fixed;
+  right: 120px;
+  bottom: 20px;
+  transition: ease-in-out 0.25s;
+  animation: myyy;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+#floating-btn2:hover {
+  background-color: #0c0c40;
+  color: white;
+  rotate: 20%;
+  box-shadow: 0px 0px 5px white;
+}
+
+@keyframes myyy {
+  0% {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    font-size: 0px;
+  }
+  70% {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    font-size: 0px;
+  }
+  100% {
+    visibility: visible;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+}
+
+input{
+  background-color: #ffffff9c !important;
+  border: none !important;
+}
+
+.card{
             margin: 30px;
             padding: 30px;
-            transition: ease 1s;
+            transition: ease 0.3s;
+            background-color: rgba(255, 255, 255, 0.158) !important;
+            color: white;
         }
         .card:hover{
-            background-color:#e2e2e2;
+            background-color:rgba(226, 226, 226, 0.37) !important;
         }
+/*# sourceMappingURL=main.css.map */
 
-        
 
 
     </style>
@@ -50,8 +351,14 @@
     <title>ConneX-Home</title>
   </head>
   <body>
+    <div style="padding-top: 30px; margin-top: 40px;" class="wrapper">
+      <div class="star"></div>
+      <div class="moon">
+        <div class="bar"></div>
+      </div>
+    
     <nav
-      class="navbar sticky-top rounded-bottom navbar-expand-lg navbar-dark bg-primary"
+      class="navbar fixed-top  navbar-expand-lg navbar-dark bg-dark"
     >
       <a class="navbar-brand" href="/homepage_connex"
         >ConneX</a
@@ -109,7 +416,8 @@
         >
       </div>
     </nav>
-<div class="card bg rounded-0">
+    <div class="container bg-transparent">
+<div class="card">
 
     <form action="/connex_contact_submit" method="POST">
         <div class="form-row">
@@ -147,19 +455,21 @@
         <div class="form-group">
           
         </div>
-        <button type="submit" class="btn btn-primary">Send <i class="fas fa-share-square"></i></button>
+        <button id="newbut" type="submit" style="background-color: #14af5a; border: none;" class="btn btn-dark">Send <i class="fas fa-share-square"></i></button>
       </form>
+      </div>
 </div>
     <div style="margin: 20px;" class="border"></div>
     <div
-      style="color: black; text-align: center; margin-bottom: 20px;"
+      style="color: white !important; text-align: center; margin-bottom: 20px;"
       id="last"
       class="wrap"
     >
-      <h6 class="text-dark small font-weight-bold">
-        <i style="color: #007bff;" class="fas fa-code"></i> with
-        <i style="color: #007bff;" class="fas fa-heart"></i> by Aryan Kashyap
+      <h6 class=" small font-weight-bold">
+        <i style="color: #14af5a;" class="fas fa-code"></i> with
+        <i style="color: #14af5a;" class="fas fa-heart"></i> by Aryan Kashyap
       </h6>
     </div>
+  </div>
   </body>
 </html>
