@@ -36,6 +36,8 @@ I made this project during my #100DaysOfCode challenge.
 
 ```
 Copyright (C) 2020 Aryan Kashyap
+Copyright (C) 2020 Tutul Devs
+Copyright (C) 2020 Laasri Nadia
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compilance with the License.
