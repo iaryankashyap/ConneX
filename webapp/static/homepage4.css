@@ -39,15 +39,29 @@
   transition: ease-in-out 0.3s;
 }
 
+#credits {
+  text-decoration: none;
+  color: #1be676;
+}
+
+#credits:hover {
+  color: #fbff00;
+}
+
 #io {
-  color: transparent;
+  color: white;
   border-color: transparent;
   transition: ease 0.4s;
 }
 .i {
   border: 1px solid;
-  border-color: transparent;
+  border-color: white;
   transition: ease 0.4s;
+}
+
+.i:hover {
+  background-color: #1be6763a;
+  box-shadow: 0px 0px 5px #ffee00;
 }
 
 .dropdown-item:hover {
@@ -58,6 +72,10 @@
   background-color: rgba(255, 255, 255, 0.219);
   box-shadow: 6px 5px 8px rgba(0, 0, 0, 0.445);
   transition: ease 0.4s;
+}
+
+.opp {
+  background-color: #ffffff73;
 }
 
 #buttonn {
@@ -74,7 +92,12 @@
 
 #car {
   transition: ease-in 0.1s;
-  background-color: rgba(255, 255, 255, 0.219);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.6026785714285714) 0%,
+    rgba(161, 161, 165, 0.5606617647058824) 0%,
+    rgba(12, 12, 65, 1) 100%
+  );
   color: white;
   border-left: #14af5a 5px solid;
   border-radius: 3px;
@@ -95,10 +118,10 @@
 }
 
 #but2:hover {
-  background-color: #14af5a;
-  color: white;
-  border-color: #14af5a;
-  border-radius: 200px;
+  border-color: white;
+  background-color: white;
+  color: #14af5a;
+  border-radius: 100px;
 }
 
 #opop {
@@ -120,7 +143,7 @@
   border-radius: 50%;
   color: white;
   font-size: 0px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.253);
   position: fixed;
   right: 40px;
   bottom: 20px;
