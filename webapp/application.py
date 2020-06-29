@@ -444,6 +444,13 @@ def detencry():
     return render_template("en-home.html")
 
 
+# TODOList
+
+@app.route('/todo')
+def todocon():
+    return render_template("todolist.html")
+
+
 # Debugging Statements
 '''
 if __name__ == "__main__":
