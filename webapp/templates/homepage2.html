@@ -9,7 +9,15 @@
     />
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../static/homepage4.css">
-
+    <style>
+      #loading{
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    background: #ecf0f1 url(../static/loading.gif) no-repeat center;
+    z-index: 99999;
+}
+    </style>
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,7 +47,8 @@
       rel="stylesheet">
     <title>ConneX-Home</title>
   </head>
-  <body>
+  <body onload="myfunction()">
+    <div id="loading"></div>
     <div class="wrapper">
       <div class="star"></div>
       <div class="moon">
@@ -141,7 +150,7 @@
           <div id="car" class="card-body">
             <h5 class="card-title">Follow</h5>
             <p class="card-text">
-              Follow me on twitter @imaryankashyap.
+              Follow me on twitter.
             </p>
             <a
               href="https://www.twitter.com/imaryankashyap"
@@ -258,6 +267,14 @@
     </div>
     <div style="margin: 0px;" class="border"></div>
   </div>
+
+  <script>
+    var preloader=document.getElementById("loading")
+
+function myfunction(){
+    preloader.style.display="none";
+}
+  </script>
  
   </body>
 </html>
