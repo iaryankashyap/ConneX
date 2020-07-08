@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/badge/License-Apache-brightgreen)
 <img src="https://img.shields.io/badge/Made%20with-Flask-blue.svg" alt="made with Flask">
-<img src="https://img.shields.io/badge/Contributors-02-blue" alt="Contributions">
+<img src="https://img.shields.io/badge/Contributors-03-blue" alt="Contributions">
 <img src="https://img.shields.io/badge/Creator-Aryan%20Kashyap-blueviolet" alt="Aryan Kashyap">
 
 <br>
