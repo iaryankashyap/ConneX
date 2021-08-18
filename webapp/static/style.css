@@ -21,7 +21,7 @@ body {
 }
 
 .connex {
-  color: #65c9ff;
+  color: #27caaa;
   font-size: 50px;
   margin-left: 65px;
   margin-top: 10px;
@@ -34,7 +34,7 @@ body {
   height: 100%;
   z-index: -1;
   -webkit-filter: hue-rotate(40deg);
-  filter: hue-rotate(40deg);
+  filter: hue-rotate(10deg);
 }
 
 .container {
@@ -147,7 +147,7 @@ form {
 }
 
 .input-div.focus > .i > i {
-  color: #65c9ff;
+  color: #27caaa;
 }
 
 .input-div > div > input {
@@ -189,7 +189,7 @@ a:hover {
   border-radius: 25px;
   outline: none;
   border: none;
-  background-image: linear-gradient(to right, #65c9ff, #65c9ff, #65c9ff);
+  background-image: linear-gradient(to right, #27caaa, #65c9ff, #65c9ff);
   background-size: 200%;
   font-size: 1.2rem;
   color: #fff;
