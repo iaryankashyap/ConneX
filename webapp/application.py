@@ -1,4 +1,5 @@
 import mysql.connector as sq
+from chatbot import chatbot
 
 import random
 from flask import Flask, flash, request, redirect, render_template
@@ -122,6 +123,10 @@ def land():
     #return render_template("landing.html")
     return redirect("/login")
 
+@app.route("/get")
+def get_bot_response():
+    userText = request.args.get('msg')
+    return str(chatbot.get_response(userText))
 
 @app.route("/login")
 def login():
@@ -212,7 +217,7 @@ def condetconnex():
 @app.route("/homepage_connex")
 def conhome():
     if logged == True:
-        return render_template("homepage2.html")
+        return render_template("index.html")
     else:
         return render_template("newlogin.html", error="Please login to continue.")
 
