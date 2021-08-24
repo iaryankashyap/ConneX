@@ -1,5 +1,5 @@
 import mysql.connector as sq
-# from chatbot import chatbot
+from chatbot import chatbot
 
 import random
 from flask import Flask, flash, request, redirect, render_template
