@@ -1,5 +1,5 @@
 import mysql.connector as sq
-from chatbot import chatbot
+# from chatbot import chatbot
 
 import random
 from flask import Flask, flash, request, redirect, render_template
@@ -460,6 +460,6 @@ def logout():
 
 # Debugging Statements
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)
 
