@@ -7,7 +7,7 @@ global logged
 logged = False
 
 app = Flask(__name__)
-
+app.static_folder = 'static'
 loginpage = "login.html"
 signuppage = "signup.html"
 
