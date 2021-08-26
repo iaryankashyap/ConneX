@@ -5,6 +5,7 @@ import random
 from flask import Flask, flash, request, redirect, render_template
 global logged
 logged = False
+global username
 
 app = Flask(__name__)
 app.static_folder = 'static'
@@ -141,6 +142,7 @@ def signup():
 @app.route("/login_details", methods=["GET", "POST"])
 def login_details():
     global logged
+    global username
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
