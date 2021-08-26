@@ -217,7 +217,7 @@ def condetconnex():
 @app.route("/homepage_connex")
 def conhome():
     if logged == True:
-        return render_template("homepage2.html")
+        return render_template("homepage2.html",username=username)
     else:
         return render_template("newlogin.html", error="Please login to continue.")
 
