@@ -121,8 +121,7 @@ def getcon():
 
 @app.route("/")
 def land():
-    #return render_template("landing.html")
-    return redirect("/login")
+    return render_template("landingfin.html")
 
 @app.route("/records")
 def records():
