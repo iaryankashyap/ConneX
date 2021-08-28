@@ -125,7 +125,7 @@ def land():
     return redirect("/login")
 
 @app.route("/records")
-def land():
+def records():
     return render_template("Records.html")
 
 # @app.route("/get")
