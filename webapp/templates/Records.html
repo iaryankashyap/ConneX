@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Med1Stop-Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        background: rgb(255, 255, 255);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      nav {
+        border-bottom: 4px #27caaa solid;
+        box-shadow: 0px -5px 20px 1px;
+      }
+      .cont {
+        text-align: center;
+        padding: 40px;
+        font-weight: 100;
+        color: black;
+        background-color: #27caaa;
+    }
+    .welcome{
+        text-align: center;
+        color: #27caaa;
+        margin-top: 30px;
+    }
+
+    .concard{
+    text-align: center;
+    padding: 10px;
+    }
+    .vid{
+        text-align: center;
+        padding-top: 60px;
+        width: auto !important;
+    }
+
+    .container{
+    text-align: center;
+}
+
+/* table{
+    display: inline-block;
+} */
+
+.cont{
+    background-color: #27caaa;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.192);
+    margin-bottom: 40px;
+}
+
+button{
+    
+    background-color: #ffffff77;
+    color: black;
+    
+    border:1px transparent solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+input{
+    height: 30px;
+    padding: 5px;
+}
+
+.form-control{
+    border: none;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.473);
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.233);
+}
+
+textarea{
+    height: 150px;
+    padding: 5px;
+}
+
+
+
+table{
+    background-color: #27caaa;
+    padding: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.192);
+    border-radius: 5px;
+    color: black !important;
+}
+th{
+    padding: 10px;
+    
+}
+.head{
+    background-color: rgba(255, 255, 255, 0.459);
+    padding: 5px;
+    color: black !important;
+    border-radius: 5px !important;
+}
+
+h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #27caaa;
+}
+
+#add, #clear, button{
+    color: #27caaa;
+    background-color: white;
+    border: none;
+}
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a style="color: #27caaa" class="navbar-brand" href="#">Med1Stop</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/homepage_connex">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/records">Records</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tweets</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            “The greatest wealth is health.” - <em>Virgil</em>
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    
+        <div class="container">
+          <h2 class="text-center">Records</h2>
+          <div class="form-group">
+            <div class="cont">
+              <input
+                type="text"
+                class="form-control"
+                id="title"
+                placeholder="Title"
+                aria-describedby="emailHelp"
+              />
+    
+              <div class="form-group">
+                <textarea class="form-control" id="description" rows="3" placeholder="Medical Description"></textarea>
+              </div>
+    
+              <button id="add" class="btn btn-primary">Add to list</button>
+              <button id="clear" class="btn btn-primary" onclick="clearStorage()">
+                Clear list
+              </button>
+            </div>
+          </div>
+    
+          <div id="items" class="my-4">
+            <h2>Your Medical History</h2>
+            <table class="table">
+              <thead>
+                <tr class="head">
+                  <th>SNo.</th>
+                  <th>Title</th>
+                  <th>Medical Description</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Default Record</td>
+                  <td>Delete this record.</td>
+                  <td><button id="butn"class="btn2">Delete</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+
+<script>function getAndUpdate() {
+    console.log("Updating List...");
+    tit = document.getElementById("title").value;
+    desc = document.getElementById("description").value;
+    if (localStorage.getItem("itemsJson") == null) {
+      itemJsonArray = [];
+      itemJsonArray.push([tit, desc]);
+      localStorage.setItem("itemsJson", JSON.stringify(itemJsonArray));
+    } else {
+      itemJsonArrayStr = localStorage.getItem("itemsJson");
+      itemJsonArray = JSON.parse(itemJsonArrayStr);
+      itemJsonArray.push([tit, desc]);
+      localStorage.setItem("itemsJson", JSON.stringify(itemJsonArray));
+    }
+    update();
+  } 
+  
+  function update() {
+    if (localStorage.getItem("itemsJson") == null) {
+      itemJsonArray = [];
+      localStorage.setItem("itemsJson", JSON.stringify(itemJsonArray));
+    } else {
+      itemJsonArrayStr = localStorage.getItem("itemsJson");
+      itemJsonArray = JSON.parse(itemJsonArrayStr);
+    }
+    // Populate the table
+    let tableBody = document.getElementById("tableBody");
+    let str = "";
+    itemJsonArray.forEach((element, index) => {
+      str += `
+          <tr>
+          <th scope="row">${index + 1}</th>
+          <td>${element[0]}</td>
+          <td>${element[1]}</td> 
+          <td><button class="btn btn-sm btn-primary" onclick="deleted(${index})">Delete</button></td> 
+          </tr>`;
+    });
+    tableBody.innerHTML = str;
+  }
+  add = document.getElementById("add");
+  add.addEventListener("click", getAndUpdate);
+  update();
+  function deleted(itemIndex) {
+    console.log("Delete", itemIndex);
+    itemJsonArrayStr = localStorage.getItem("itemsJson");
+    itemJsonArray = JSON.parse(itemJsonArrayStr);
+    // Delete itemIndex element from the array
+    itemJsonArray.splice(itemIndex, 1);
+    localStorage.setItem("itemsJson", JSON.stringify(itemJsonArray));
+    update();
+  }
+  function clearStorage() {
+    if (confirm("Do you areally want to clear?")) {
+      console.log("Clearing the storage");
+      localStorage.clear();
+      update();
+    }
+  }</script>
+
+<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+        
+  </body>
+</html>

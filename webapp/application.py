@@ -124,6 +124,10 @@ def land():
     #return render_template("landing.html")
     return redirect("/login")
 
+@app.route("/records")
+def land():
+    return render_template("Records.html")
+
 # @app.route("/get")
 # def get_bot_response():
 #     userText = request.args.get('msg')
