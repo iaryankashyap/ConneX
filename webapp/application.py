@@ -262,6 +262,12 @@ def logout():
     logged = False
     return redirect("/")
 
+    
+@app.route("/tweets")
+def twee():
+    return render_template("tweets.html")
+    
+
 # # READX
 
 
